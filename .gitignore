@@ -48,4 +48,4 @@ yarn-error.log*
 # Firmware
 *.bin
 *.elf
-*.map
+*.map# archivos ignorados por git
