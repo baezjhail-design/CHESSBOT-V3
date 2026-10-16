@@ -1,40 +1,40 @@
-# Chess Bot V3
+# CHESSBOT V3
 
-Robot de ajedrez que detecta piezas, valida jugadas y mueve piezas fÌsicamente con motores.
+Robot de ajedrez que detecta piezas, valida jugadas y mueve piezas f√≠sicamente con motores.
 
-## øQuÈ hace cada parte?
+## ¬øQu√© hace cada parte?
 
 - **apps/web:** Pantalla donde el usuario ve el tablero y juega (React).
-- **services/api:** Servidor que recibe pedidos de la pantalla y los envÌa al n˙cleo (Node.js).
-- **core:** Cerebro del ajedrez en C++ (Raspberry Pi). Decide si una jugada es v·lida.
-- **firmware:** CÛdigo para las ESP32. Una lee sensores, la otra mueve motores.
-- **contracts:** Reglas de cÛmo se hablan las partes (mensajes HTTP y MQTT).
+- **services/api:** Servidor que recibe pedidos de la pantalla y los env√≠a al n√∫cleo (Node.js).
+- **core:** Cerebro del ajedrez en C++ (Raspberry Pi). Decide si una jugada es v√°lida.
+- **firmware:** C√≥digo para las ESP32. Una lee sensores, la otra mueve motores.
+- **contracts:** Reglas de c√≥mo se hablan las partes (mensajes HTTP y MQTT).
 - **tests:** Pruebas para verificar que todo funcione.
-- **docs:** DocumentaciÛn y decisiones de arquitectura.
+- **docs:** Documentaci√≥n y decisiones de arquitectura.
 
 ## Estructura del repositorio
 
 `	ext
 apps/web/         # Frontend React
 services/api/     # Backend API Node.js
-core/             # N˙cleo C++ (lÛgica del juego)
+core/             # N√∫cleo C++ (l√≥gica del juego)
 firmware/         # Firmware ESP32 (sensores y motores)
 contracts/        # Contratos compartidos (HTTP, MQTT, eventos)
-tests/            # Pruebas de integraciÛn y simulaciÛn
-docs/             # DocumentaciÛn y ADR
+tests/            # Pruebas de integraci√≥n y simulaci√≥n
+docs/             # Documentaci√≥n y ADR
 scripts/          # Scripts de utilidad
 `
 
-## Reglas b·sicas
+## Reglas b√°sicas
 
 1. La pantalla muestra y pide.
 2. El servidor valida y comunica.
-3. El n˙cleo C++ decide el estado de la partida.
+3. El n√∫cleo C++ decide el estado de la partida.
 4. Las ESP32 ejecutan y reportan.
-5. Nada se asume como hecho hasta que haya una confirmaciÛn.
+5. Nada se asume como hecho hasta que haya una confirmaci√≥n.
 
 ## Principio fundamental
 
-> La UI presenta y solicita; la API valida y comunica; el n˙cleo C++ decide el estado de la partida y coordina; las ESP32 ejecutan tareas locales y reportan resultados. Ninguna capa debe asumir que otra completÛ una operaciÛn sin una confirmaciÛn verificable.
+> La UI presenta y solicita; la API valida y comunica; el n√∫cleo C++ decide el estado de la partida y coordina; las ESP32 ejecutan tareas locales y reportan resultados. Ninguna capa debe asumir que otra complet√≥ una operaci√≥n sin una confirmaci√≥n verificable.
 
-M·s detalles en docs/ARCHITECTURE.md y softwarerules.md.
+M√°s detalles en docs/ARCHITECTURE.md y softwarerules.md.
