@@ -1,6 +1,6 @@
 # Chess Bot V3
 
-Sistema de robot de ajedrez con detección de piezas, motor de ajedrez y ejecución física mediante ESP32.
+Sistema de ajedrez autónomo con detección de piezas, motor de ajedrez y ejecución física mediante ESP32.
 
 ## Arquitectura
 
