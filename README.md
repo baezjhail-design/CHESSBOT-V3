@@ -1,33 +1,40 @@
 # Chess Bot V3
 
-Sistema de ajedrez autÃ³nomo con detecciÃ³n de piezas, motor de ajedrez y ejecuciÃ³n fÃ­sica mediante ESP32.
+Robot de ajedrez que detecta piezas, valida jugadas y mueve piezas físicamente con motores.
 
-## Arquitectura
+## ¿Qué hace cada parte?
 
-- **Frontend:** React + TypeScript (`apps/web`)
-- **API:** Node.js + TypeScript + Fastify (`services/api`)
-- **NÃºcleo:** C++ en Raspberry Pi (`core`)
-- **Firmware:** C++ con ESP-IDF en ESP32 (`firmware`)
-- **ComunicaciÃ³n:** HTTP REST, WebSocket y MQTT
-- **Build C++:** CMake
+- **apps/web:** Pantalla donde el usuario ve el tablero y juega (React).
+- **services/api:** Servidor que recibe pedidos de la pantalla y los envía al núcleo (Node.js).
+- **core:** Cerebro del ajedrez en C++ (Raspberry Pi). Decide si una jugada es válida.
+- **firmware:** Código para las ESP32. Una lee sensores, la otra mueve motores.
+- **contracts:** Reglas de cómo se hablan las partes (mensajes HTTP y MQTT).
+- **tests:** Pruebas para verificar que todo funcione.
+- **docs:** Documentación y decisiones de arquitectura.
 
 ## Estructura del repositorio
 
-```
+`	ext
 apps/web/         # Frontend React
 services/api/     # Backend API Node.js
-core/             # NÃºcleo C++ (lÃ³gica del juego)
+core/             # Núcleo C++ (lógica del juego)
 firmware/         # Firmware ESP32 (sensores y motores)
 contracts/        # Contratos compartidos (HTTP, MQTT, eventos)
-tests/            # Pruebas de integraciÃ³n y simulaciÃ³n
-docs/             # DocumentaciÃ³n y ADR
+tests/            # Pruebas de integración y simulación
+docs/             # Documentación y ADR
 scripts/          # Scripts de utilidad
-```
+`
 
-## Reglas de desarrollo
+## Reglas básicas
 
-Consultar `softwarerules.md` para las reglas completas de arquitectura, dependencias, comunicaciÃ³n y pruebas.
+1. La pantalla muestra y pide.
+2. El servidor valida y comunica.
+3. El núcleo C++ decide el estado de la partida.
+4. Las ESP32 ejecutan y reportan.
+5. Nada se asume como hecho hasta que haya una confirmación.
 
 ## Principio fundamental
 
-> La UI presenta y solicita; la API valida y comunica; el nÃºcleo C++ decide el estado de la partida y coordina; las ESP32 ejecutan tareas locales y reportan resultados. Ninguna capa debe asumir que otra completÃ³ una operaciÃ³n sin una confirmaciÃ³n verificable.
+> La UI presenta y solicita; la API valida y comunica; el núcleo C++ decide el estado de la partida y coordina; las ESP32 ejecutan tareas locales y reportan resultados. Ninguna capa debe asumir que otra completó una operación sin una confirmación verificable.
+
+Más detalles en docs/ARCHITECTURE.md y softwarerules.md.
