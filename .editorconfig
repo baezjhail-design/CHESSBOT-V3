@@ -15,4 +15,4 @@ indent_size = 2
 indent_size = 2
 
 [*.md]
-trim_trailing_whitespace = false
+trim_trailing_whitespace = false# estilo de codigo del editor
