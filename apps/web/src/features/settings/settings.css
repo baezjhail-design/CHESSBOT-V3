@@ -1,0 +1,9 @@
+.cb-settings { display: grid; gap: 18px; max-width: 720px; margin: 0 auto; }
+.cb-set { display: grid; gap: 16px; justify-items: start; }
+.cb-themes { display: grid; grid-template-columns: repeat(3, 1fr); gap: 10px; width: 100%; }
+.cb-theme { display: grid; gap: 8px; justify-items: center; padding: 12px; border-radius: var(--radius-m); background: var(--surface-2); border: 1.5px solid transparent; cursor: pointer; color: var(--text-muted); font-weight: 600; }
+.cb-theme:hover { background: var(--surface-3); color: var(--text); }
+.cb-theme[aria-checked='true'] { border-color: var(--magnet); color: var(--text); }
+.cb-theme__sw { display: grid; grid-template-columns: 1fr 1fr; width: 64px; height: 64px; border-radius: 8px; overflow: hidden; }
+.cb-theme__sw i { background: var(--sq-light); }
+.cb-theme__sw i:nth-child(2), .cb-theme__sw i:nth-child(3) { background: var(--sq-dark); }

@@ -1,0 +1,57 @@
+:root {
+  --font-display: 'Big Shoulders Display Variable', 'Arial Narrow', sans-serif;
+  --font-body: 'Hanken Grotesk Variable', system-ui, sans-serif;
+
+  /* Superficies: del fondo al primer plano */
+  --bg: #0d1424;
+  --surface-1: #141d33;
+  --surface-2: #1b2744;
+  --surface-3: #25345a;
+  --line: #2c3c63;
+
+  --text: #e8edf7;
+  --text-muted: #9eabc7;
+  --text-faint: #6d7c9f;
+
+  /* Cobre: el imán. Es la marca de ChessBot y la acción principal. */
+  --magnet: #f0a04b;
+  --magnet-strong: #ffb766;
+  --magnet-ink: #2a1703;
+  --confirmed: #78d9bd;
+  --danger: #f2685e;
+  --warn: #f0c24b;
+
+  /* Piezas */
+  --piece-w-fill: #f6f3ec;
+  --piece-w-stroke: #19213a;
+  --piece-w-detail: #9aa6c4;
+  --piece-b-fill: #2b3556;
+  --piece-b-stroke: #070b16;
+  --piece-b-detail: #95a5d0;
+
+  /* Tablero (tema Cobalto por defecto) */
+  --sq-light: #dde3ee;
+  --sq-dark: #5b77a6;
+  --sq-label-on-light: #5b77a6;
+  --sq-label-on-dark: #dde3ee;
+
+  --radius-s: 6px;
+  --radius-m: 12px;
+  --radius-l: 20px;
+
+  --ease: cubic-bezier(0.22, 0.8, 0.25, 1);
+  --shadow-float: 0 18px 50px -18px rgba(3, 7, 18, 0.7);
+}
+
+[data-board='celadon'] {
+  --sq-light: #dfe8df;
+  --sq-dark: #6d9486;
+  --sq-label-on-light: #6d9486;
+  --sq-label-on-dark: #dfe8df;
+}
+[data-board='nogal'] {
+  --sq-light: #ead9bf;
+  --sq-dark: #a47a58;
+  --sq-label-on-light: #a47a58;
+  --sq-label-on-dark: #ead9bf;
+}

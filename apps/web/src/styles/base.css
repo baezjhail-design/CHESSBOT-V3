@@ -1,0 +1,20 @@
+*, *::before, *::after { box-sizing: border-box; }
+html, body, #root { height: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-body);
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+h1, h2, h3, p { margin: 0; }
+button { font: inherit; color: inherit; }
+:focus-visible { outline: 2px solid var(--magnet-strong); outline-offset: 2px; }
+.cb-piece--w { --pf: var(--piece-w-fill); --ps: var(--piece-w-stroke); --pd: var(--piece-w-detail); }
+.cb-piece--b { --pf: var(--piece-b-fill); --ps: var(--piece-b-stroke); --pd: var(--piece-b-detail); }
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+}
