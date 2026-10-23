@@ -2,7 +2,23 @@
 
 Frontend de ChessBot: React 19 + TypeScript estricto + Vite. Muestra el estado **confirmado** del tablero y envía solicitudes a la API. No decide si una jugada es válida, no habla con MQTT ni con las ESP32 (ver `softwarerules.md` §5.1).
 
-## Arrancar
+## Arrancar (la forma fácil)
+
+Solo necesitas [Node.js LTS](https://nodejs.org) instalado. Vite, React y el resto se instalan solos dentro del proyecto.
+
+- **Windows:** doble clic en `iniciar-web.bat` (en la raíz del repo).
+- **Mac / Linux:** `./iniciar-web.sh`
+- **Terminal de VS Code:** `cd apps/web` y `npm start`.
+
+La primera vez instala las dependencias y después abre el navegador en http://localhost:5173 con el simulador (no necesita backend ni hardware).
+
+## Personalizar el aspecto
+
+En **Ajustes > Aspecto**: color de acento (6 colores + selector libre), tema de la interfaz (Medianoche, Grafito, Bosque, Ciruela, Claro), estilo de piezas, tablero (6 temas), esquinas, tamaño del texto y animaciones. Se guarda en el navegador.
+
+Para añadir un color o tema propio edita `src/styles/tokens.css` (bloques `[data-accent]`, `[data-ui]`, `[data-pieces]`, `[data-board]`) y registra la opción en `features/settings/SettingsScreen.tsx` y `state/prefs-store.ts`. Todo es solo CSS/preferencias: no toca la lógica ni la comunicación con la API.
+
+## Arrancar a mano
 
 ```bash
 cd apps/web

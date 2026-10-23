@@ -1,11 +1,12 @@
 *, *::before, *::after { box-sizing: border-box; }
+html { font-size: calc(16px * var(--ui-scale)); }
 html, body, #root { height: 100%; }
 body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
   font-family: var(--font-body);
-  font-size: 16px;
+  font-size: 1rem;
   line-height: 1.5;
   -webkit-font-smoothing: antialiased;
 }
@@ -15,6 +16,7 @@ button { font: inherit; color: inherit; }
 .cb-piece--w { --pf: var(--piece-w-fill); --ps: var(--piece-w-stroke); --pd: var(--piece-w-detail); }
 .cb-piece--b { --pf: var(--piece-b-fill); --ps: var(--piece-b-stroke); --pd: var(--piece-b-detail); }
 .sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+[data-motion='off'] *, [data-motion='off'] *::before, [data-motion='off'] *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 @media (prefers-reduced-motion: reduce) {
   *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
 }

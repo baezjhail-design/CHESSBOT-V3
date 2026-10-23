@@ -39,6 +39,13 @@
   --radius-m: 12px;
   --radius-l: 20px;
 
+  /* Resaltados del tablero: siguen al color de acento */
+  --hl-last: var(--magnet-strong);
+  --hl-selected: var(--magnet);
+  --btn-hover: #2e4070;
+  --on-danger: #ff9b93;
+  --ui-scale: 1;
+
   --ease: cubic-bezier(0.22, 0.8, 0.25, 1);
   --shadow-float: 0 18px 50px -18px rgba(3, 7, 18, 0.7);
 }
@@ -54,4 +61,60 @@
   --sq-dark: #a47a58;
   --sq-label-on-light: #a47a58;
   --sq-label-on-dark: #ead9bf;
+}
+
+/* ---------- Color de acento (el imán) ---------- */
+[data-accent='esmeralda'] { --magnet: #3fcf9a; --magnet-strong: #6fe3b9; --magnet-ink: #03241a; }
+[data-accent='violeta']   { --magnet: #a78bfa; --magnet-strong: #c1adff; --magnet-ink: #180b3d; }
+[data-accent='rosa']      { --magnet: #f472b6; --magnet-strong: #ff9ccf; --magnet-ink: #3a0720; }
+[data-accent='cielo']     { --magnet: #4cc2ff; --magnet-strong: #84d6ff; --magnet-ink: #04243a; }
+[data-accent='limon']     { --magnet: #d4e157; --magnet-strong: #e6ee8a; --magnet-ink: #232800; }
+
+/* ---------- Tema de la interfaz ---------- */
+[data-ui='grafito'] {
+  --bg: #121214; --surface-1: #1a1a1e; --surface-2: #242429; --surface-3: #32323a; --line: #3a3a43;
+  --text: #ececf1; --text-muted: #a5a5b2; --text-faint: #75758a; --btn-hover: #3d3d47;
+}
+[data-ui='bosque'] {
+  --bg: #0c1812; --surface-1: #12241b; --surface-2: #19321f; --surface-3: #244631; --line: #2b5039;
+  --text: #e6f2ea; --text-muted: #9bbaa6; --text-faint: #688a76; --btn-hover: #2f5a40;
+}
+[data-ui='ciruela'] {
+  --bg: #170f20; --surface-1: #20152e; --surface-2: #2c1d40; --surface-3: #3d2a58; --line: #4a3468;
+  --text: #f0e9f8; --text-muted: #b6a5cc; --text-faint: #8a78a6; --btn-hover: #4b3569;
+}
+[data-ui='claro'] {
+  --bg: #eef1f7; --surface-1: #ffffff; --surface-2: #e6eaf3; --surface-3: #d5dcec; --line: #c4cde2;
+  --text: #141c30; --text-muted: #46526e; --text-faint: #6b7794; --btn-hover: #c7d0e6;
+  --on-danger: #b3261e; --shadow-float: 0 18px 50px -20px rgba(30, 45, 80, 0.35);
+  --confirmed: #12805f; --warn: #946b00; --danger: #c7372d;
+}
+
+/* ---------- Estilo de piezas ---------- */
+[data-pieces='marfil'] {
+  --piece-w-fill: #fbf7ea; --piece-w-stroke: #3a2c1a; --piece-w-detail: #b49a6a;
+  --piece-b-fill: #3b2a20; --piece-b-stroke: #120a05; --piece-b-detail: #c9a36f;
+}
+[data-pieces='neon'] {
+  --piece-w-fill: #e9fffb; --piece-w-stroke: #0b4a45; --piece-w-detail: #3fd8c6;
+  --piece-b-fill: #2a1546; --piece-b-stroke: #0a0414; --piece-b-detail: #ff6ad5;
+}
+[data-pieces='mono'] {
+  --piece-w-fill: #ffffff; --piece-w-stroke: #000000; --piece-w-detail: #7a7a7a;
+  --piece-b-fill: #171717; --piece-b-stroke: #000000; --piece-b-detail: #bdbdbd;
+}
+
+/* ---------- Esquinas ---------- */
+[data-radius='recto']     { --radius-s: 2px; --radius-m: 4px;  --radius-l: 6px; }
+[data-radius='redondo']   { --radius-s: 10px; --radius-m: 18px; --radius-l: 28px; }
+
+/* ---------- Más tableros ---------- */
+[data-board='pizarra'] {
+  --sq-light: #d9dbe0; --sq-dark: #6b7280; --sq-label-on-light: #6b7280; --sq-label-on-dark: #d9dbe0;
+}
+[data-board='amatista'] {
+  --sq-light: #e8dff3; --sq-dark: #8a6bb0; --sq-label-on-light: #8a6bb0; --sq-label-on-dark: #e8dff3;
+}
+[data-board='coral'] {
+  --sq-light: #fbe6dc; --sq-dark: #d1806a; --sq-label-on-light: #d1806a; --sq-label-on-dark: #fbe6dc;
 }

@@ -16,7 +16,7 @@
 .cb-player__adv { margin-left: 8px; color: var(--text-muted); font-weight: 700; font-size: 0.85rem; }
 .cb-clock { min-width: 108px; text-align: right; padding: 2px 14px; border-radius: 10px; background: var(--surface-2); font-family: var(--font-display); font-weight: 750; font-size: 2rem; line-height: 1.25; font-variant-numeric: tabular-nums; color: var(--text-muted); transition: background 160ms, color 160ms; }
 .cb-clock.is-active { background: var(--surface-3); color: var(--text); box-shadow: inset 0 0 0 1.5px var(--magnet); }
-.cb-clock.is-low { color: #ff9b93; box-shadow: inset 0 0 0 1.5px var(--danger); }
+.cb-clock.is-low { color: var(--on-danger); box-shadow: inset 0 0 0 1.5px var(--danger); }
 
 /* Estado: la voz del sistema */
 .cb-status { display: grid; gap: 10px; padding: 18px 20px; border-radius: var(--radius-l); background: var(--surface-1); border: 1px solid var(--line); }
@@ -37,7 +37,7 @@
 .cb-track__step.is-done { color: var(--text-muted); }
 .cb-track__step.is-done .cb-track__node { background: var(--magnet); border-color: var(--magnet); }
 .cb-track__step.is-now { color: var(--text); }
-.cb-track__step.is-now .cb-track__node { border-color: var(--magnet); background: var(--surface-1); box-shadow: 0 0 0 4px rgba(240, 160, 75, 0.2); }
+.cb-track__step.is-now .cb-track__node { border-color: var(--magnet); background: var(--surface-1); box-shadow: 0 0 0 4px color-mix(in srgb, var(--magnet) 20%, transparent); }
 .cb-track__step.is-busy .cb-track__node { animation: cb-blink 1s ease-in-out infinite; }
 
 /* Panel de jugadas y maestro */
@@ -51,10 +51,10 @@
 
 .cb-moves { list-style: none; margin: 0; padding: 0; font-variant-numeric: tabular-nums; }
 .cb-moves__row { display: grid; grid-template-columns: 40px 1fr 1fr; align-items: center; }
-.cb-moves__row:nth-child(odd) { background: rgba(255, 255, 255, 0.025); }
+.cb-moves__row:nth-child(odd) { background: color-mix(in srgb, var(--text) 3%, transparent); }
 .cb-moves__n { color: var(--text-faint); text-align: center; font-size: 0.85rem; }
 .cb-moves__m { padding: 5px 10px; font-weight: 650; border-radius: 6px; }
-.cb-moves__m.is-last { background: rgba(240, 160, 75, 0.22); color: var(--magnet-strong); }
+.cb-moves__m.is-last { background: color-mix(in srgb, var(--magnet) 22%, transparent); color: var(--magnet-strong); }
 
 .cb-master-pane { display: grid; gap: 14px; align-content: start; padding: 14px; }
 .cb-master-pane__head { display: flex; gap: 14px; align-items: center; }

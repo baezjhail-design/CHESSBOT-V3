@@ -1,12 +1,12 @@
 .cb-btn { display: inline-flex; align-items: center; justify-content: center; gap: 8px; min-height: 44px; padding: 0 18px; border-radius: var(--radius-m); border: 1px solid transparent; background: var(--surface-3); color: var(--text); font-weight: 650; cursor: pointer; transition: background 160ms, transform 120ms, border-color 160ms; }
-.cb-btn:hover:not(:disabled) { background: #2e4070; }
+.cb-btn:hover:not(:disabled) { background: var(--btn-hover); }
 .cb-btn:active:not(:disabled) { transform: translateY(1px); }
 .cb-btn:disabled { opacity: 0.45; cursor: not-allowed; }
 .cb-btn--primary { background: var(--magnet); color: var(--magnet-ink); }
 .cb-btn--primary:hover:not(:disabled) { background: var(--magnet-strong); }
 .cb-btn--ghost { background: transparent; border-color: var(--line); }
 .cb-btn--ghost:hover:not(:disabled) { background: var(--surface-2); }
-.cb-btn--danger { background: transparent; border-color: rgba(242, 104, 94, 0.55); color: #ff9b93; }
+.cb-btn--danger { background: transparent; border-color: rgba(242, 104, 94, 0.55); color: var(--on-danger); }
 .cb-btn--danger:hover:not(:disabled) { background: rgba(242, 104, 94, 0.14); }
 .cb-btn--big { min-height: 56px; font-size: 1.15rem; padding: 0 28px; font-family: var(--font-display); letter-spacing: 0.01em; font-weight: 760; }
 .cb-btn--small { min-height: 36px; padding: 0 12px; font-size: 0.9rem; }

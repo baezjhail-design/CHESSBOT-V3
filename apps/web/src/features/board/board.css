@@ -2,8 +2,8 @@
 .cb-board__svg { position: absolute; inset: 0; width: 100%; height: 100%; display: block; }
 .cb-sq--light { fill: var(--sq-light); }
 .cb-sq--dark { fill: var(--sq-dark); }
-.cb-hl--last { fill: #ffc468; opacity: 0.72; }
-.cb-hl--selected { fill: #ffb54d; opacity: 0.88; }
+.cb-hl--last { fill: var(--hl-last); opacity: 0.72; }
+.cb-hl--selected { fill: var(--hl-selected); opacity: 0.88; }
 .cb-coord { font: 700 17px var(--font-body); pointer-events: none; }
 .cb-coord--on-light { fill: var(--sq-label-on-light); }
 .cb-coord--on-dark { fill: var(--sq-label-on-dark); }
